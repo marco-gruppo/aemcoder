@@ -1,17 +1,17 @@
 /* Block: carousel-hero -- full-screen hero carousel */
 
 /* Universal-safe: constrain all images unconditionally.
-   Works in all states: undecorated, loading, UE editing, and loaded. */
+   Uses fixed px fallback because UE iframe makes vh units unreliable. */
 .carousel-hero img {
   max-width: 100% !important;
-  max-height: 100vh !important;
+  max-height: 900px !important;
   object-fit: cover;
   display: block;
 }
 
 .carousel-hero video {
   max-width: 100% !important;
-  max-height: 100vh !important;
+  max-height: 900px !important;
   object-fit: cover;
   display: block;
 }
@@ -19,7 +19,7 @@
 .carousel-hero picture {
   display: block;
   overflow: hidden;
-  max-height: 100vh;
+  max-height: 900px;
 }
 
 .carousel-hero > div {
@@ -72,7 +72,8 @@ main > .section:has(.carousel-hero) {
   align-items: center;
   position: relative;
   width: 100%;
-  min-height: calc(100dvh - var(--header-height));
+  height: 900px;
+  max-height: calc(100dvh - var(--header-height));
   overflow: hidden;
 }
 
@@ -80,7 +81,7 @@ main > .section:has(.carousel-hero) {
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-image {
   grid-area: slide;
   min-height: 0;
-  max-height: calc(100dvh - var(--header-height));
+  max-height: 900px;
   overflow: hidden;
   z-index: 0;
 }
@@ -92,7 +93,7 @@ main > .section:has(.carousel-hero) {
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture {
   display: block;
-  height: calc(100dvh - var(--header-height));
+  height: 900px;
 }
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture > img {
@@ -104,7 +105,7 @@ main > .section:has(.carousel-hero) {
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-image video {
   width: 100%;
-  height: calc(100dvh - var(--header-height));
+  height: 900px;
   object-fit: cover;
 }
 
