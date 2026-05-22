@@ -1,13 +1,34 @@
 /* Block: carousel-hero -- full-screen hero carousel */
 
-/* Undecorated state: constrain images before JS runs (Universal Editor) */
-.carousel-hero img {
-  max-width: 100%;
-  height: auto;
+/* Constrain images in all states including Universal Editor editing mode.
+   UE may not execute block JS, leaving images in raw block table structure. */
+.carousel-hero {
+  overflow: hidden;
+  max-height: 100dvh;
 }
 
-.carousel-hero > div {
+.carousel-hero picture {
+  display: block;
+  max-width: 100%;
   overflow: hidden;
+}
+
+.carousel-hero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100dvh;
+  object-fit: cover;
+}
+
+.carousel-hero video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100dvh;
+  object-fit: cover;
 }
 
 /* Values extracted from source computed styles at vargroup.com */
