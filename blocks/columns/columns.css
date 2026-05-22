@@ -33,19 +33,20 @@
 }
 
 /* =============================================
-   SPLIT VARIANT
+   SPLIT VARIANT (.columns-split on AEM Sites)
    ============================================= */
 
-.columns-wrapper:has(.columns.split) {
+.columns-split-wrapper {
   max-width: 100% !important;
   padding: 0 !important;
 }
 
-.columns.split {
+.columns-split {
   color: var(--text-color);
 }
 
-.columns.split > div {
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-split > div {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -53,28 +54,28 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.columns.split > div > div {
+.columns-split > div > div {
   position: relative;
   order: unset;
 }
 
-.columns.split > div > div:first-child {
+.columns-split > div > div:first-child {
   display: flex;
   flex-direction: column;
 }
 
-.columns.split > div > div:first-child p:first-child {
+.columns-split > div > div:first-child p:first-child {
   margin: 0;
 }
 
-.columns.split > div > div:first-child p:first-child img {
+.columns-split > div > div:first-child p:first-child img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-.columns.split > div > div:first-child h3 {
+.columns-split > div > div:first-child h3 {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -83,7 +84,8 @@
   padding: 28px 28px 0;
 }
 
-.columns.split > div > div:first-child p:nth-child(3) {
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-split > div > div:first-child p:nth-child(3) {
   font-size: 15px;
   font-weight: 400;
   line-height: 22.4px;
@@ -92,7 +94,7 @@
   padding: 0 28px;
 }
 
-.columns.split > div > div:first-child::after {
+.columns-split > div > div:first-child::after {
   content: "";
   display: block;
   width: 56px;
@@ -109,7 +111,7 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.columns.split > div > div:last-child {
+.columns-split > div > div:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +120,7 @@
   padding: 48px 28px;
 }
 
-.columns.split > div > div:last-child h2 {
+.columns-split > div > div:last-child h2 {
   font-size: 28px;
   font-weight: 300;
   line-height: 1.3;
@@ -127,7 +129,7 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.columns.split > div > div:last-child p {
+.columns-split > div > div:last-child p {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
@@ -135,19 +137,19 @@
   margin: 0 0 16px;
 }
 
-.columns.split > div > div:last-child a:any-link {
+.columns-split > div > div:last-child a:any-link {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
 
-.columns.split > div > div:last-child a:hover {
+.columns-split > div > div:last-child a:hover {
   text-decoration: underline;
   color: #fff;
 }
 
-main .columns.split > div > div:last-child a.button:any-link {
+main .columns-split > div > div:last-child a.button:any-link {
   background: none;
   border: none;
   border-radius: 0;
@@ -162,7 +164,7 @@ main .columns.split > div > div:last-child a.button:any-link {
   white-space: normal;
 }
 
-main .columns.split > div > div:last-child a.button:any-link::after {
+main .columns-split > div > div:last-child a.button:any-link::after {
   content: "";
   display: inline-block;
   width: 22px;
@@ -172,47 +174,47 @@ main .columns.split > div > div:last-child a.button:any-link::after {
   background-size: contain;
 }
 
-main .columns.split > div > div:last-child a.button:hover {
+main .columns-split > div > div:last-child a.button:hover {
   background: none;
   color: #fff;
   text-decoration: underline;
 }
 
 @media (width >= 900px) {
-  .columns.split > div {
+  .columns-split > div {
     flex-direction: row;
     height: 720px;
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
-  .columns.split > div > div {
+  .columns-split > div > div {
     flex: 1 1 50%;
     height: 720px;
   }
 
-  .columns.split > div > div:first-child {
+  .columns-split > div > div:first-child {
     justify-content: flex-end;
     overflow: hidden;
   }
 
-  .columns.split > div > div:first-child p:first-child {
+  .columns-split > div > div:first-child p:first-child {
     position: absolute;
     inset: 0;
     z-index: 1;
   }
 
-  .columns.split > div > div:first-child p:first-child picture {
+  .columns-split > div > div:first-child p:first-child picture {
     position: absolute;
     inset: 0;
   }
 
-  .columns.split > div > div:first-child p:first-child img {
+  .columns-split > div > div:first-child p:first-child img {
     position: absolute;
     inset: 0;
     height: 100%;
   }
 
-  .columns.split > div > div:first-child h3 {
+  .columns-split > div > div:first-child h3 {
     position: relative;
     z-index: 3;
     background-color: #fff;
@@ -220,7 +222,7 @@ main .columns.split > div > div:last-child a.button:hover {
     max-width: 82%;
   }
 
-  .columns.split > div > div:first-child p:nth-child(3) {
+  .columns-split > div > div:first-child p:nth-child(3) {
     position: relative;
     z-index: 3;
     background-color: #fff;
@@ -228,11 +230,11 @@ main .columns.split > div > div:last-child a.button:hover {
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
-  .columns.split > div > div:last-child {
+  .columns-split > div > div:last-child {
     padding: 0 64px;
   }
 
-  .columns.split > div > div:last-child h2 {
+  .columns-split > div > div:last-child h2 {
     font-size: 34px;
     font-weight: 300;
     line-height: 44.8px;
@@ -242,12 +244,12 @@ main .columns.split > div > div:last-child a.button:hover {
 
 /* Reversed layout: second consecutive split columns */
 @media (width >= 900px) {
-  .columns-wrapper + .columns-wrapper .columns.split > div {
+  .columns-split-wrapper + .columns-split-wrapper .columns-split > div {
     flex-direction: row-reverse;
   }
 }
 
 /* Section padding removal for full-bleed effect */
-main > .section > .columns-wrapper:has(.columns.split) {
+main > .section > .columns-split-wrapper {
   padding: 0;
 }
