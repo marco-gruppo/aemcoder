@@ -2,7 +2,7 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   position: fixed;
 }
 
@@ -17,7 +17,7 @@ header nav {
   margin: auto;
   max-width: 1920px;
   height: var(--nav-height);
-  padding: 0 24px;
+  padding: 8px 24px;
   font-family: var(--body-font-family);
 }
 
@@ -33,10 +33,10 @@ header nav[aria-expanded='true'] {
 @media (width >= 900px) {
   header nav {
     display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
+    justify-content: flex-start;
+    gap: 0;
     max-width: 1920px;
-    padding: 0 64px;
+    padding: 8px 64px;
   }
 
   header nav[aria-expanded='true'] {
@@ -138,15 +138,16 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 155px;
+  flex-basis: auto;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  margin-right: 48px;
 }
 
 header nav .nav-brand img {
   width: 155px;
-  height: auto;
+  height: 28px;
 }
 
 /* sections */
@@ -220,13 +221,15 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 8px;
     margin: 0;
+    align-items: center;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding: 8px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -238,24 +241,14 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     position: absolute;
     left: -24px;
-    width: 200px;
+    width: 220px;
     top: 150%;
     padding: 16px;
-    background-color: var(--light-color);
+    background-color: var(--background-color);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+    border-radius: 4px;
     white-space: initial;
     z-index: 1;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -266,8 +259,21 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  margin-left: auto;
 }
 
+header nav .nav-tools a:any-link {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+header nav .nav-tools a:hover {
+  color: var(--link-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-tools .button {
   margin: 0;
   border: none;
@@ -280,9 +286,9 @@ header nav .nav-tools .button {
 header .breadcrumbs {
   display: none;
   margin: auto;
-  max-width: 1248px;
+  max-width: 1920px;
   height: var(--breadcrumbs-height);
-  padding: 0 24px;
+  padding: 0 64px;
   font-size: var(--body-font-size-xs);
   overflow: hidden;
 }
@@ -316,7 +322,6 @@ header .breadcrumbs ol li[aria-current] {
 @media (width >= 900px) {
   header .breadcrumbs {
     display: block;
-    max-width: 1264px;
-    padding: 0 32px;
+    padding: 0 64px;
   }
 }
