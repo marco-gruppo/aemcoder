@@ -31,3 +31,223 @@
     order: unset;
   }
 }
+
+/* =============================================
+   SPLIT VARIANT
+   ============================================= */
+
+.columns-wrapper:has(.columns.split) {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.columns.split {
+  color: var(--text-color);
+}
+
+.columns.split > div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.columns.split > div > div {
+  position: relative;
+  order: unset;
+}
+
+.columns.split > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns.split > div > div:first-child p:first-child {
+  margin: 0;
+}
+
+.columns.split > div > div:first-child p:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.columns.split > div > div:first-child h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--text-color);
+  margin: 0 0 16px;
+  padding: 28px 28px 0;
+}
+
+.columns.split > div > div:first-child p:nth-child(3) {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: var(--text-color);
+  margin: 0 0 48px;
+  padding: 0 28px;
+}
+
+.columns.split > div > div:first-child::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: var(--link-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='8' viewBox='0 0 21.687 8.28'%3E%3Cpath d='M21.687 4.14l-4.14 4.14V4.64H0V3.64h17.547V0z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.columns.split > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 48px 28px;
+}
+
+.columns.split > div > div:last-child h2 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #fff;
+  margin: 0 0 48px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.columns.split > div > div:last-child p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.columns.split > div > div:last-child a:any-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.columns.split > div > div:last-child a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+main .columns.split > div > div:last-child a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: normal;
+}
+
+main .columns.split > div > div:last-child a.button:any-link::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='8' viewBox='0 0 21.687 8.28'%3E%3Cpath d='M21.687 4.14l-4.14 4.14V4.64H0V3.64h17.547V0z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main .columns.split > div > div:last-child a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns.split > div {
+    flex-direction: row;
+    height: 720px;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .columns.split > div > div {
+    flex: 1 1 50%;
+    height: 720px;
+  }
+
+  .columns.split > div > div:first-child {
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .columns.split > div > div:first-child p:first-child {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .columns.split > div > div:first-child p:first-child picture {
+    position: absolute;
+    inset: 0;
+  }
+
+  .columns.split > div > div:first-child p:first-child img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .columns.split > div > div:first-child h3 {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    padding: 28px 28px 0;
+    max-width: 82%;
+  }
+
+  .columns.split > div > div:first-child p:nth-child(3) {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    max-width: 82%;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .columns.split > div > div:last-child {
+    padding: 0 64px;
+  }
+
+  .columns.split > div > div:last-child h2 {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 44.8px;
+    margin-bottom: 48px;
+  }
+}
+
+/* Reversed layout: second consecutive split columns */
+@media (width >= 900px) {
+  .columns-wrapper + .columns-wrapper .columns.split > div {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Section padding removal for full-bleed effect */
+main > .section > .columns-wrapper:has(.columns.split) {
+  padding: 0;
+}
