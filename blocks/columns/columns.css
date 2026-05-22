@@ -121,8 +121,8 @@
 }
 
 .columns-split > div > div:last-child h2 {
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: 200;
   line-height: 1.3;
   color: #fff;
   margin: 0 0 48px;
@@ -218,15 +218,16 @@ main .columns-split > div > div:last-child a.button:hover {
     position: relative;
     z-index: 3;
     background-color: #fff;
-    padding: 28px 28px 0;
-    max-width: 82%;
+    padding: 28px 32px 0;
+    max-width: 95%;
   }
 
   .columns-split > div > div:first-child p:nth-child(3) {
     position: relative;
     z-index: 3;
     background-color: #fff;
-    max-width: 82%;
+    max-width: 95%;
+    padding: 0 32px 32px;
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
@@ -235,9 +236,9 @@ main .columns-split > div > div:last-child a.button:hover {
   }
 
   .columns-split > div > div:last-child h2 {
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 44.8px;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 52px;
     margin-bottom: 48px;
   }
 }
