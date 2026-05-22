@@ -261,8 +261,10 @@ main img {
 }
 
 /* default content width constraint (matches source ~66% width) */
-main > .section > .default-content-wrapper {
-  max-width: 880px;
+@media (width >= 900px) {
+  main > .section > .default-content-wrapper {
+    max-width: 66%;
+  }
 }
 
 /* sections */
@@ -272,7 +274,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: none;
   margin: auto;
   padding: 0 24px;
 }
@@ -283,7 +285,7 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 64px;
   }
 }
 
