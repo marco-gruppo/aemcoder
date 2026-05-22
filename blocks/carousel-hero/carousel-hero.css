@@ -1,5 +1,15 @@
 /* Block: carousel-hero -- full-screen hero carousel */
 
+/* Undecorated state: constrain images before JS runs (Universal Editor) */
+.carousel-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-hero > div {
+  overflow: hidden;
+}
+
 /* Values extracted from source computed styles at vargroup.com */
 
 /* Section and wrapper overrides for full-bleed hero */
