@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-split",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-22T06:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.vargroup.com/",
+    "originPage": "corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "spacious",
+    "purpose": "split-layout",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image column + colored text column with heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "50/50 split layouts with image and text",
+      "branded color panel sections",
+      "career/recruitment sections",
+      "sustainability and values sections"
+    ],
+    "notSuitableFor": [
+      "multi-column text layouts",
+      "3+ column grids",
+      "simple side-by-side content without background"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T06:51:00.000Z"
+  }
+}

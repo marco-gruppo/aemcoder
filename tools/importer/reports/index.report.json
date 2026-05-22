@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.vargroup.com/",
+  "path": "index",
+  "timestamp": "2026-05-22T07:11:46.585Z",
+  "title": "Var Group | Digital Soul",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "hero-banner",
+    "cards-service",
+    "cards-casestudy",
+    "cards-casestudy",
+    "columns-split",
+    "columns-split",
+    "hero-video"
+  ]
+}

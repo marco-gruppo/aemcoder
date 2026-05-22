@@ -1,20 +1,110 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: rgb(234 234 234);
+  color: rgb(80 80 80);
+  font-size: 14px;
+  font-family: var(--body-font-family);
+  line-height: 24px;
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: 1920px;
+  padding: 60px 64px 0;
 }
 
+footer .footer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(180 180 180);
+}
+
+footer .footer > div:first-child img {
+  max-width: 155px;
+  height: auto;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div:first-child p {
+  margin: 0;
+  color: rgb(80 80 80);
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 400px;
+}
+
+footer .footer > div:nth-child(2) {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer .footer > div:nth-child(2) p {
+  margin: 0 0 16px;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(0 0 0);
+}
+
+footer .footer > div:nth-child(2) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div:nth-child(2) ul li {
+  margin: 0;
+}
+
+footer .footer > div:nth-child(2) a:any-link {
+  color: rgb(80 80 80);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer .footer > div:nth-child(2) a:hover {
+  color: rgb(0 0 0);
+  text-decoration: underline;
+}
+
+footer .footer > div:last-child {
+  border-top: 1px solid rgb(180 180 180);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div:last-child p {
+  margin: 0 0 8px;
+  color: rgb(80 80 80);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer .footer > div:last-child a:any-link {
+  color: rgb(80 80 80);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer .footer > div:last-child a:hover {
+  color: rgb(0 0 0);
+  text-decoration: underline;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
 footer .footer p {
   margin: 0;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer > div:first-child {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
   }
 }

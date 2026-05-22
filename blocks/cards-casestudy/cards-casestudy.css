@@ -1,0 +1,129 @@
+/* Block: cards-casestudy */
+
+/* Asymmetric grid of case study cards with alternating sizes */
+
+.cards-casestudy > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cards-casestudy > ul > li {
+  overflow: hidden;
+}
+
+/* Spacing between consecutive cards-casestudy blocks */
+.cards-casestudy-wrapper + .cards-casestudy-wrapper {
+  margin-top: 32px;
+}
+
+/* Image container */
+.cards-casestudy .cards-casestudy-card-image {
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cards-casestudy .cards-casestudy-card-image p {
+  margin: 0;
+}
+
+.cards-casestudy > ul > li img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.02 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.cards-casestudy .cards-casestudy-card-body {
+  padding: 16px 0 0;
+}
+
+/* Company name (h3) */
+.cards-casestudy .cards-casestudy-card-body h3 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--body-font-family);
+  line-height: 1.3;
+  color: rgb(42 41 44);
+  margin: 0 0 4px;
+}
+
+/* Description link paragraph */
+.cards-casestudy .cards-casestudy-card-body p:nth-child(2) {
+  font-size: 20px;
+  font-family: var(--body-font-family);
+  line-height: 30px;
+  color: rgb(118 118 118);
+  margin: 0 0 8px;
+}
+
+/* Link styling inside description - source shows grey text for description links */
+main .cards-casestudy a.button:any-link,
+.cards-casestudy .cards-casestudy-card-body a:any-link {
+  color: rgb(118 118 118);
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+}
+
+main .cards-casestudy a.button:any-link::after {
+  content: none;
+}
+
+.cards-casestudy .cards-casestudy-card-body a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* Category tag (italic paragraph) */
+.cards-casestudy .cards-casestudy-card-body p:last-child {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(42 41 44);
+  margin: 4px 0 0;
+}
+
+.cards-casestudy .cards-casestudy-card-body p:last-child em {
+  font-style: normal;
+}
+
+/* Desktop layout: asymmetric 2-column */
+@media (width >= 900px) {
+  .cards-casestudy > ul {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  /* First instance: smaller card first, larger card second */
+  .cards-casestudy > ul > li:first-child {
+    flex: 0 0 41.7%;
+  }
+
+  .cards-casestudy > ul > li:last-child {
+    flex: 0 0 50%;
+  }
+
+  /* Alternating pattern: second cards-casestudy block reverses sizes */
+  .cards-casestudy-wrapper + .cards-casestudy-wrapper .cards-casestudy > ul > li:first-child {
+    flex: 0 0 50%;
+  }
+
+  .cards-casestudy-wrapper + .cards-casestudy-wrapper .cards-casestudy > ul > li:last-child {
+    flex: 0 0 41.7%;
+  }
+}

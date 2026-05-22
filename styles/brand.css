@@ -1,0 +1,16 @@
+:root {
+  --heading-font-family: "Manrope", sans-serif;
+  --body-font-family: "Manrope", sans-serif;
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #1268fb;
+  --link-hover-color: #0d4fcc;
+  --section-padding: 60px 0;
+  --nav-height: 80px;
+  --heading-size-xxl: 56px;
+  --heading-size-xl: 34px;
+  --heading-size-l: 28px;
+  --heading-size-m: 25px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 18px;
+}

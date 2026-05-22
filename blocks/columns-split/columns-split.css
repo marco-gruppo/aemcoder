@@ -1,0 +1,197 @@
+/* Block: columns-split
+ * 50/50 split layout: one side photo with card overlay, other side solid blue background
+ * Full-width edge-to-edge, no container max-width
+ */
+
+/* Full-width wrapper override */
+.columns-split-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Base block styles (mobile-first: stacked) */
+.columns-split {
+  color: var(--text-color);
+}
+
+/* Row layout */
+.columns-split > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cells base */
+.columns-split > div > div {
+  position: relative;
+}
+
+/* Photo cell (first child) */
+.columns-split > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image paragraph */
+.columns-split > div > div:first-child p:first-child {
+  margin: 0;
+}
+
+.columns-split > div > div:first-child p:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Card overlay on photo side */
+.columns-split > div > div:first-child h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--text-color);
+  margin: 0;
+  padding: 16px 28px;
+}
+
+.columns-split > div > div:first-child p:nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0 28px 28px;
+}
+
+/* Blue column (second child) */
+.columns-split > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--link-color);
+  padding: 48px 28px;
+}
+
+/* Blue column heading */
+.columns-split > div > div:last-child h2 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #fff;
+  margin: 0 0 48px;
+}
+
+/* Blue column paragraph */
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-split > div > div:last-child p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+/* Blue column link */
+.columns-split > div > div:last-child a:any-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.columns-split > div > div:last-child a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Override default button styling in blue column */
+main .columns-split > div > div:last-child a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: normal;
+}
+
+main .columns-split > div > div:last-child a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .columns-split > div {
+    flex-direction: row;
+  }
+
+  .columns-split > div > div {
+    flex: 1 1 50%;
+    min-height: 720px;
+  }
+
+  /* Photo cell desktop: image as absolute background */
+  .columns-split > div > div:first-child {
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .columns-split > div > div:first-child p:first-child {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .columns-split > div > div:first-child p:first-child picture {
+    position: absolute;
+    inset: 0;
+  }
+
+  .columns-split > div > div:first-child p:first-child img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  /* Card overlay desktop: white bg, positioned at bottom */
+  .columns-split > div > div:first-child h3 {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    padding: 28px 28px 16px;
+    max-width: 82%;
+  }
+
+  .columns-split > div > div:first-child p:nth-child(3) {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    max-width: 82%;
+  }
+
+  /* Blue column desktop padding */
+  .columns-split > div > div:last-child {
+    padding: 24px 64px;
+  }
+
+  /* Blue column heading desktop size */
+  .columns-split > div > div:last-child h2 {
+    font-size: 34px;
+    line-height: 44.8px;
+  }
+}
+
+/* Reversed layout: second consecutive columns-split swaps columns */
+@media (width >= 900px) {
+  .columns-split-wrapper + .columns-split-wrapper .columns-split > div {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Section padding removal for full-bleed effect */
+main > .section > .columns-split-wrapper {
+  padding: 0;
+}

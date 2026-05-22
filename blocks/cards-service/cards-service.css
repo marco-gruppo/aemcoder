@@ -1,0 +1,127 @@
+/* Block: cards-service -- service link cards grid */
+
+/* Overlaps hero-banner section from below with negative margin */
+
+.cards-service-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.cards-service {
+  position: relative;
+  z-index: 5;
+  margin-top: -176px;
+  padding: 0 16px;
+}
+
+.cards-service > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-service > ul > li {
+  margin: -1px 0 0 -1px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(118 118 118);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 28px 0;
+  min-height: 177px;
+  background-color: var(--background-color);
+}
+
+/* Hide the empty first card-body div (from empty image cell) */
+.cards-service > ul > li > .cards-service-card-image,
+.cards-service > ul > li > .cards-service-card-body:first-child:empty {
+  display: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-service > ul > li > .cards-service-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.cards-service .cards-service-card-body p {
+  margin: 0;
+}
+
+/* Reset button styling for this block -- make links look like plain text */
+.cards-service .button-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards-service a.button:any-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25.6px;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  white-space: normal;
+}
+
+.cards-service a.button:any-link::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 8px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='8' viewBox='0 0 21.687 8.28'%3E%3Cpath d='M21.687 4.14l-4.14 4.14V4.64H0V3.64h17.547V0z' fill='%231268fb'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cards-service a.button:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  background: none;
+}
+
+.cards-service > ul > li:hover {
+  background-color: var(--link-color);
+}
+
+.cards-service > ul > li:hover a.button:any-link {
+  color: #fff;
+}
+
+.cards-service > ul > li:hover a.button:any-link::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='8' viewBox='0 0 21.687 8.28'%3E%3Cpath d='M21.687 4.14l-4.14 4.14V4.64H0V3.64h17.547V0z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* Tablet: 2 columns */
+@media (width >= 600px) {
+  .cards-service > ul > li {
+    width: 50%;
+  }
+}
+
+/* Desktop: 4 columns */
+@media (width >= 900px) {
+  .cards-service {
+    padding: 0 64px;
+  }
+
+  .cards-service > ul > li {
+    width: 25%;
+  }
+}

@@ -185,9 +185,15 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
+  // Remove injected head elements (meta, link, script) from nav
+  nav.querySelectorAll(':scope > meta, :scope > link, :scope > script').forEach((el) => el.remove());
+
+  const navSectionDivs = [...nav.children].filter(
+    (child) => child.tagName === 'DIV' && child.classList.contains('section'),
+  );
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
-    const section = nav.children[i];
+    const section = navSectionDivs[i];
     if (section) section.classList.add(`nav-${c}`);
   });
 

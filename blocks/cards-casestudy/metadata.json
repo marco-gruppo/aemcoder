@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-casestudy",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-22T06:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.vargroup.com/",
+    "originPage": "corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "case-studies",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description + category tag per card",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "case study showcases",
+      "portfolio items with images",
+      "project highlights with categories"
+    ],
+    "notSuitableFor": [
+      "text-only card grids",
+      "icon-based feature lists",
+      "navigation link cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T06:51:00.000Z"
+  }
+}

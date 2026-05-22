@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.vargroup.com/"
+      ],
+      "description": "Var Group corporate homepage with hero, services overview, and company information",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "section.HeaderHomepage_HeaderHomepage__BSyAP"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            ".LauncherLargeCardCta_textContainer__WFl1l"
+          ]
+        },
+        {
+          "name": "cards-service",
+          "instances": [
+            ".LauncherCardList_LauncherCardList__RAAB_"
+          ]
+        },
+        {
+          "name": "cards-casestudy",
+          "instances": [
+            "section.ContentNewCase_ContentNewCaseContainer__ly98L"
+          ]
+        },
+        {
+          "name": "columns-split",
+          "instances": [
+            "section.LauncherDouble_LauncherDouble__OteTD"
+          ]
+        },
+        {
+          "name": "hero-video",
+          "instances": [
+            "section.LauncherLarge_LauncherLarge__Al6bc"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": "section.HeaderHomepage_HeaderHomepage__BSyAP",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Company Introduction",
+          "selector": "section.LauncherTextMedium_LauncherTextMedium__ZisFK",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "section.LauncherTextMedium_LauncherTextMedium__ZisFK h1",
+            "section.LauncherTextMedium_LauncherTextMedium__ZisFK .LauncherTextMedium_text__G_Jvt",
+            "section.LauncherTextMedium_LauncherTextMedium__ZisFK footer a"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Services Banner and Card Grid",
+          "selector": "section.LauncherLargeCardCta_LauncherLargeCardCta__uSZUa",
+          "style": null,
+          "blocks": [
+            "hero-banner",
+            "cards-service"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Case History Introduction",
+          "selector": "section.LauncherTextSmall_LauncherTextSmall__VhmE1",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "section.LauncherTextSmall_LauncherTextSmall__VhmE1 h4",
+            "section.LauncherTextSmall_LauncherTextSmall__VhmE1 footer a"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Case Studies Grid",
+          "selector": "section.ContentNewCase_ContentNewCaseContainer__ly98L",
+          "style": null,
+          "blocks": [
+            "cards-casestudy"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Careers Split Layout",
+          "selector": [
+            "section.LauncherDouble_LauncherDouble__OteTD:nth-of-type(1)",
+            "section.LauncherDouble_LauncherDouble__OteTD:first-of-type"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Sustainability Split Layout",
+          "selector": [
+            "section.LauncherDouble_LauncherDouble__OteTD:nth-of-type(2)",
+            "section.LauncherDouble_LauncherDouble__OteTD:last-of-type"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Values Video Background",
+          "selector": "section.LauncherLarge_LauncherLarge__Al6bc",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

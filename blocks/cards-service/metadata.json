@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-service",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-22T06:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.vargroup.com/",
+    "originPage": "corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "service-links",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + arrow icon link per card",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service listing grids",
+      "navigation card grids",
+      "text-only link cards without images"
+    ],
+    "notSuitableFor": [
+      "cards with images",
+      "product cards with descriptions",
+      "testimonial cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T06:51:00.000Z"
+  }
+}

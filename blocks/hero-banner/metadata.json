@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-22T06:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.vargroup.com/",
+    "originPage": "corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + centered heading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-width banner sections with background image",
+      "section dividers with impact text",
+      "call-to-action banners without buttons"
+    ],
+    "notSuitableFor": [
+      "hero sections with multiple CTAs",
+      "text-only sections without background"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T06:51:00.000Z"
+  }
+}

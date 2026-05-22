@@ -1,0 +1,11 @@
+{
+  "type": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "previewOrg": "marco-gruppo",
+  "previewSite": "aemcoder",
+  "contentHostUrl": "author-p23407-e64064.adobeaemcloud.com",
+  "aemSitePath": "/content/aemcoder",
+  "aemAssetsFolderPath": "/content/dam/aemcoder",
+  "aemSiteName": "aemcoder",
+  "aemSiteTitle": "Marco AEMCoder"
+}

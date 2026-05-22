@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-22T06:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.vargroup.com/",
+    "originPage": "corporate homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "video-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background video + heading + CTA link",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-width video background sections",
+      "immersive banner sections with video",
+      "values/mission statement sections"
+    ],
+    "notSuitableFor": [
+      "static image hero sections",
+      "hero sections with multiple CTAs",
+      "inline video embeds"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T06:51:00.000Z"
+  }
+}
